@@ -27,8 +27,15 @@ public class Exercicio_18 {
             } catch (NumberFormatException e) {
                 System.out.println("Por favor, digite apenas números!");
             }
-
-            if (senha == 1234) {
+/* try   VEFICAÇAO SE E LETRA
+{
+                senha = Integer.parseInt(entrada.nextLine());
+                
+            } catch (NumberFormatException e) {
+                System.out.println("Por favor, digite apenas números!");
+            }
+  */
+  if (senha == 1234) {
                 System.out.println("Senha correta! Bem-vindo ao sistema");
                 System.out.println("-------------------------------------");
             } else {
