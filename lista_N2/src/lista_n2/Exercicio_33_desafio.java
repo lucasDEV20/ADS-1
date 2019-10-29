@@ -7,8 +7,12 @@
  b) Qual a média de idade entre os eleitores do candidato mais votado
  c) Qual o candidato preferido dos homens
  */
-package lista_N2;
+package lista_n2;
 
+/**
+ *
+ * @author Computador
+ */
 import java.util.Scanner;
 
 /**
@@ -19,18 +23,29 @@ public class Exercicio_33_desafio {
     public static void main(String[] args) {
         Scanner desafio = new Scanner(System.in);
         //varivel candidato
-        int idade, soma_idade = 0, quant_homen = 0, candidato_1 = 0, candidato_2 = 0, candidato_3 = 0, numero_votos, maior = 0;
-        int homen1 = 0 , homen2 = 0, homen3 = 0, homen_mais_votado;
+        int candidato_1 = 0, candidato_2 = 0, candidato_3 = 0;
         String candidato = null;
+        //idade 
+        int idade, soma_idade = 0;
+        //votos 
+        int numero_votos;
+        //cantidato com maior numero de votos 
+        int maior = 0;
+        //verificaçao de candidatos prefridos pelos homens
+        int homen1 = 0, homen2 = 0, homen3 = 0, candidato_preferido_homens = 0;
+        //media de idade
         double media_idade = 0;
         //opcao de saida
         String opcao, sexo;
+        //=================
         do {
             System.out.println();
             System.out.println("===================================================");
             System.out.println("=======================IBOPE=======================");
+            //entrada de escolha do candidato
             System.out.println("Escolha um dos candidatos a seguir (1 , 2 , 3");
             candidato = desafio.nextLine();
+            //empregando opçoes
             if (candidato.equalsIgnoreCase("1")) {
                 candidato_1++;
                 homen1++;
@@ -43,22 +58,33 @@ public class Exercicio_33_desafio {
                 candidato_3++;
                 homen3++;
             }
-             if (homen1) {
-                
+            //verificaçao da preferencia dos homens
+            if (homen1 > candidato_preferido_homens) {
+                candidato_preferido_homens = homen1;
             }
-
+            if (homen2 > candidato_preferido_homens) {
+                candidato_preferido_homens = homen2;
+            }
+            if (homen3 > candidato_preferido_homens) {
+                candidato_preferido_homens = homen3;
+            }
+            //pegando imformaçoes de idade
             System.out.println("Qual a idade do eleitor");
             idade = desafio.nextInt();
+            //soma das idades para se ter a media
             soma_idade = soma_idade + idade;
+            //lixo 
             desafio.nextLine();
-            System.out.println("qual o sexo do usuario (1-mulher, 2-homem)");
+            //verificaçao de sexo do usuario
+            System.out.println("Qual o sexo do usuario (1-mulher, 2-homem)");
             sexo = desafio.nextLine();
 
             if (sexo.equalsIgnoreCase("2")) {
-                quant_homen++;
-            }
-            media_idade = ((soma_idade) / (candidato_1+candidato_2+candidato_3));
 
+            }
+            //media das idades
+            media_idade = ((soma_idade) / (candidato_1 + candidato_2 + candidato_3));
+            //verificaçao do numeros de votos , do maiot candidato
             if (candidato_1 > maior) {
                 maior = candidato_1;
             }
@@ -68,20 +94,27 @@ public class Exercicio_33_desafio {
             if (candidato_3 > maior) {
                 maior = candidato_3;
             }
-            //saida
+            //saida do programa 
             System.out.println("Deseja sair do programa ? (sim/nao)");
             opcao = desafio.nextLine();
+            System.out.println("===================================================");
 
         } while (opcao.equalsIgnoreCase("nao"));
         numero_votos = candidato_1 + candidato_2 + candidato_3;
+        //saida de dados pos fim do programa
+        System.out.println();
+        System.out.println("===================================================");
 
-        System.out.printf("o mais vototado e %d \n", maior);
+        System.out.printf("O mais vototado e %d \n", maior);
 
-        System.out.printf("o numero de votos e %d \n", numero_votos);
+        System.out.printf("O numero de votos e %d \n", numero_votos);
 
-        System.out.printf("a media de idades dos eleitores é %.2f \n", media_idade);
+        System.out.printf("A media de idades dos eleitores é %.2f \n", media_idade);
 
-        System.out.printf("a quantidade de homens e : %d \n", quant_homen);
+        System.out.printf("O candidato preferido dos homens é %d \n", candidato_preferido_homens);
+
+        System.out.println("===================================================");
+        System.out.println();
     }
 
 }
