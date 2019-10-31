@@ -1,44 +1,38 @@
 /*
-43. Faça um programa que preencha um vetor com 10 números inteiros. Calcule e mostre os
-números superiores a 50 e suas respectivas posições. O programa deverá mostrar uma
-mensagem se não existir nenhum número nessa condição.
+ 43. Faça um programa que preencha um vetor com 10 números inteiros. Calcule e mostre os
+ números superiores a 50 e suas respectivas posições. O programa deverá mostrar uma
+ mensagem se não existir nenhum número nessa condição.
  */
 package lista_N2;
 
-import java.util.Random;
 import java.util.Scanner;
+
 /**
-e la vamos nos vetor
-* 
+ * e la vamos nos vetor
+ *
  */
 public class Exercicio_43 {
-    
+
     public static void main(String[] args) {
-        Scanner entrada = new Scanner (System.in);
+        Scanner entrada = new Scanner(System.in);
+        
         int num[] = new int[10];
-        System.out.print("vetor 1 = ");
-        for (int i = 0; i < num.length; i++) {
-           
-            num[i] = sorteia(0,100);
-            System.out.print(num[i]+" ");
-            
+        int cont = 1;
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Porfavor insira o " + (i + 1) + " numero :");
+            num[i] = entrada.nextInt();
+
         }
-        System.out.println();
         for (int i = 0; i < num.length; i++) {
             if (num[i] > 50) {
-                System.out.println(num[i]+" e maior que 50");
-            }else  {
-               if (num[i] < 50) {
-                   System.out.println(num[i]+" nao e maior que 50");   
-               } 
+                System.out.println(num[i] + " e maior que 50, na posição " + (i + 1)+"º");
+                cont++;
             }
         }
-    }
-  
+        if (cont <= 1) {
+            System.out.println("Não existem numeros maiores que 50");
         
-    public static int sorteia(int limiteInferior, int limiteSuperior)
-	{
-		Random rd = new Random();
-		return rd.nextInt(limiteSuperior - limiteInferior + 1) + limiteInferior;
-	}
+        }
+
+    }
 }
