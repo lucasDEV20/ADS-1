@@ -28,7 +28,7 @@ public class x1064 {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
-        double num = 0, media, num_pos = 0, soma = 0;
+        double num , media, n, soma = 0;
         int cont = 0;
         for (int i = 0; i < 6; i++) {
 
@@ -42,6 +42,6 @@ public class x1064 {
 
         media = (soma) / cont;
         System.out.printf("%d valores positivos\n", cont);
-        System.out.println(media);
+        System.out.printf("%.1f\n",media);
     }
 }
