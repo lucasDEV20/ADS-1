@@ -56,9 +56,11 @@ public class Exercicio_51 {
             if (vet2[i] == 0) {
                 System.out.println("===================================================");
                 OPERADORES = "\n[+] SOMA\n[-] SUBTRAÇÃO\n[*] MULTIPLICAÇÃO\n";
+                System.out.println("===================================================");
             } else {
                 System.out.println("===================================================");
                 OPERADORES = "\n[+] SOMA\n[-] SUBTRAÇÃO\n[*] MULTIPLICAÇÃO\n[/] DIVISÃO\n";
+                System.out.println("===================================================");
             }
 
             do {
@@ -95,66 +97,87 @@ public class Exercicio_51 {
 
             switch (operador[i]) {
                 case '+':
+                    System.out.println("===================================================");
                     resul[i] = vet1[i] + vet2[i];
                     break;
 
                 case '-':
+                    System.out.println("===================================================");
                     resul[i] = vet1[i] - vet2[i];
                     break;
 
                 case '*':
+                    System.out.println("===================================================");
                     resul[i] = vet1[i] * vet2[i];
                     break;
 
                 case '/':
+                    System.out.println("===================================================");
                     resul[i] = vet1[i] / vet2[i];
                     break;
 
             }
             System.out.printf("%.2f\n", resul[i]);
+            System.out.println("===================================================");
         }
         //saida do vetor 1
+        System.out.println("===================================================");
         System.out.printf("vet1[]  = { ");
         for (int i = 0; i < vet1.length; i++) {
             if (i == vet1.length - 1) {
                 System.out.printf("%.2f", vet1[i]);
+                System.out.println("===================================================");
             } else {
                 System.out.printf("%.2f\t", vet1[i]);
+                System.out.println("===================================================");
             }
         }
         System.out.printf(" }\n");
+        System.out.println("===================================================");
         //saida do vetor 2
+        System.out.println("===================================================");
         System.out.printf("vet2[]  = { ");
         for (int i = 0; i < vet1.length; i++) {
             if (i == vet1.length - 1) {
                 System.out.printf("%.2f", vet2[i]);
+                System.out.println("===================================================");
             } else {
                 System.out.printf("%.2f\t", vet2[i]);
+                System.out.println("===================================================");
             }
         }
         System.out.printf(" }\n");
+        System.out.println("===================================================");
         //saida do perador
+        System.out.println("===================================================");
         System.out.printf("operadpr[]  = { ");
         for (int i = 0; i < vet1.length; i++) {
             if (i == vet1.length - 1) {
                 System.out.printf(" %s ", operador[i]);
+                System.out.println("===================================================");
             } else {
                 System.out.printf(" %s ", operador[i]);
+                System.out.println("===================================================");
             }
             System.out.printf(" ");
         }
         System.out.printf(" }\n");
+        System.out.println("===================================================");
         //saida do resultadp
+       System.out.println("===================================================");
         System.out.printf("resul[]  = { ");
         for (int i = 0; i < vet1.length; i++) {
             if (i == vet1.length - 1) {
                 System.out.printf("%.2f", resul[i]);
+                System.out.println("===================================================");
             } else {
                 System.out.printf("%.2f\t", resul[i]);
+                System.out.println("===================================================");
             }
 
         }
         System.out.printf(" }\n");
+        System.out.println("===================================================");
 
     }
 
