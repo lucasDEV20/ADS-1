@@ -37,11 +37,15 @@ import java.util.Scanner;
 public class x1007 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner (System.in);
-        //valores inteiros
-        int A , B , C , D;
-        A = entrada.nextInt();
-        B = entrada.nextInt();
-        C = entrada.nextInt();
-        D = entrada.nextInt();
-    }
+    //Leia quatro valores inteiros A, B, C e D.
+    int A,B,C,D ,DIFERENCA;
+    A = entrada.nextInt();
+     B = entrada.nextInt();
+      C = entrada.nextInt();
+       D = entrada.nextInt();
+     //segundo a fórmula: DIFERENCA = (A * B - C * D)
+       DIFERENCA = (A * B - C *D);
+       //SAIDA  
+       System.out.println("DIFERENCA = "+DIFERENCA);
+  }
 }
