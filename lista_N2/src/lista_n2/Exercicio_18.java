@@ -1,10 +1,9 @@
 /*
- Faça um programa que leia uma senha (número inteiro). Em seguida, pergunte ao
- usuário a senha informada, caso a senha esteja errada imprima “Senha incorreta, tente
- novamente” e leia novamente a senha. Caso o usuário digite a senha correta, imprima
- “Senha correta! Bem-vindo ao sistema”.
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package lista_N2;
+package lista_n2;
 
 import java.util.Scanner;
 
@@ -21,21 +20,22 @@ public class Exercicio_18 {
             System.out.println("-------------------------------------");
             System.out.println("SISTEMA SECRETO");
             System.out.println("informe a senha");
+            System.out.println("senha composta por dois numeros pares e dois numeors impares");
             try {
                 senha = Integer.parseInt(entrada.nextLine());
-                
+
             } catch (NumberFormatException e) {
                 System.out.println("Por favor, digite apenas números!");
             }
-/* try   VEFICAÇAO SE E LETRA
-{
-                senha = Integer.parseInt(entrada.nextLine());
+            /* try   VEFICAÇAO SE E LETRA
+             {
+             senha = Integer.parseInt(entrada.nextLine());
                 
-            } catch (NumberFormatException e) {
-                System.out.println("Por favor, digite apenas números!");
-            }
-  */
-  if (senha == 1234) {
+             } catch (NumberFormatException e) {
+             System.out.println("Por favor, digite apenas números!");
+             }
+             */
+            if (senha == 1234) {
                 System.out.println("Senha correta! Bem-vindo ao sistema");
                 System.out.println("-------------------------------------");
             } else {

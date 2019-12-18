@@ -12,11 +12,13 @@ import java.util.Scanner;
 public class Exercicio_07 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner (System.in);
+        //variaveis 
         int goias = 0 , vila = 0, outros = 0, times = 1 , torcedores ;
         String resposta ;
-        goias = vila = outros = 0;
         boolean continuar = true;
         while (continuar){
+        //inicio daas condiçoes do loop 
+            // pedindo a escolha do usuario
         System.out.println();
         System.out.println("======================================");
         System.out.println("=======SELECIONE UMAS DAS OPÇOES======");
@@ -25,10 +27,12 @@ public class Exercicio_07 {
         System.out.println("O - outros");
         System.out.println("F - fim");
         System.out.println("======================================");
+        //leitira da leitura do usuario
         resposta = entrada.next();            
         System.out.println();
         
-        
+       //opçoes e suas determinadas condiçoes
+          //enpregando as condiçoes
         switch (resposta.toUpperCase()) {
             case "G":
             case "g":
@@ -53,10 +57,14 @@ public class Exercicio_07 {
             System.out.println("======================================");
         }
             torcedores = goias + vila + outros;
+            //contagem geral dos torcedores
             System.out.println();
             System.out.println("torcedores entrevistados "+ torcedores);
+            //torcedores do goias
             System.out.println("torcedores do goias " + goias);
+            //torcedores do vila
             System.out.println("torcedores do vila " + vila);
+            //torcedores de outros times
             System.out.println("torcedores de outros times " + outros);
             System.out.println("======================================");
             System.out.println();

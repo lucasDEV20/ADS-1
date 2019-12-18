@@ -11,27 +11,33 @@ public class Exercicio_05 {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int quant, numero, soma = 0, cont = 1, media = 0;
+        int quant, numero = 0, soma = 0, cont = 1, media = 0;
         //entrada da quantidade de numeros 
         System.out.println("favor inserir quantos numeros serao verificados ");
         quant = entrada.nextInt();
         //while que vai repitir a partir da quantidade d e vezes que usuario desejar
-        cont = 'a';
-        if (cont == 'a') {
-            System.out.println("favor digitar um numero");
-        }
         while (cont <= quant) {
             System.out.println();
             System.out.println("=======================================================");
             System.out.println("insria o numero ");
             numero = entrada.nextInt();
+            //entrada do numero 
+            //a partir do numeros teremos o valor a ser somado
+            //repitindo e claro quantas vezes o usuario desejar 
             soma = numero + numero;
+            //soma do numero 
             cont++;
+            //dando valor a media 
             media = soma/numero;
+            //adquirindo a media a partir da soma do numero , fornecido pelo usuario
+            
         }
+        //saida da soma dos numeros 
         System.out.println("a soma dos numeros e "+ soma);
+        //saida da media dos numeros    
         System.out.println("a media e " + media);
         System.out.println("=======================================================");
         System.out.println();
+        //ATENÇAO FALTA A QUATIDADE DE NUMEROS DIGITADOS 
     }
 }

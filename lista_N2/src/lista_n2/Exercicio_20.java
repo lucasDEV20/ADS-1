@@ -6,7 +6,7 @@
  esteja incorreta a seguinte mensagem deverá ser apresentada: “SENHA INCORRETA,
  TENTE NOVAMENTE”. Foi estipulado um limite de 3 tentativas para digitação da
  senha, caso o usuário ultrapasse esse limite, o sistema deverá bloquear o acesso com a
- seguinte mensagem: “ACESSO BLOQUEADO, PROCURE UM MODERADOR!”.
+ seguinte mensagem: “ACESSO BLOQUEADO, PROCURE UM MODERADOR!”. (eu olhei o do vovo)
  */
 package lista_n2;
 
@@ -26,7 +26,7 @@ public class Exercicio_20 {
         //cadastro de senha  
         System.out.print(" senha: ");
         senha1 = entrada.nextInt();
-        do {    // } while (senha1 != senha2 && tentativas < 3);
+        do {    
             // Entrada da senha2
             System.out.print(" Digite a senha novamente: ");
             senha2 = entrada.nextInt();

@@ -8,13 +8,7 @@
  c) Qual o candidato preferido dos homens
  */
 package lista_n2;
-
-/**
- *
- * @author Computador
- */
 import java.util.Scanner;
-
 /**
  * e la vamos nos mais uma vez
  */
@@ -22,6 +16,7 @@ public class Exercicio_33_desafio {
 
     public static void main(String[] args) {
         Scanner desafio = new Scanner(System.in);
+        //=================
         //varivel candidato
         int candidato_1 = 0, candidato_2 = 0, candidato_3 = 0;
         String candidato = null;
@@ -36,7 +31,10 @@ public class Exercicio_33_desafio {
         //media de idade
         double media_idade = 0;
         //opcao de saida
-        String opcao, sexo;
+        String opcao;
+        //votos em homen
+        String sexo;
+        int homen_votados = 0;
         //=================
         do {
             System.out.println();
@@ -80,7 +78,7 @@ public class Exercicio_33_desafio {
             sexo = desafio.nextLine();
 
             if (sexo.equalsIgnoreCase("2")) {
-
+                   homen_votados++;
             }
             //media das idades
             media_idade = ((soma_idade) / (candidato_1 + candidato_2 + candidato_3));

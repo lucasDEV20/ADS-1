@@ -6,12 +6,12 @@
  Divis [ 3 11 5 8 2]
  Saída:
  Número 5:
- Divisível por 5 na posição 2
- Número 12:
- Divisível por 3 na posição 0
- Divisível por 2 na posição 4
- Número 4:
- Divisível por 2 na posição 4
+  Divisível por 5 na posição 2
+   Número 12:
+    Divisível por 3 na posição 0
+     Divisível por 2 na posição 4
+      Número 4:
+       Divisível por 2 na posição 4
  */
 package lista_n2;
 
@@ -74,7 +74,7 @@ public class Exercicio_48 {
 
     public static void imprimeVetor(int[] vetor) {
         for (int i = 0; i < vetor.length; i++) {
-            if (i % 2 == 0) {
+            if (i % 5 == 0) {
                 //quando completar 2 posiçoes o 
                 //resultado ira quebrar em 25
                 System.out.println("\n");

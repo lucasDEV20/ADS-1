@@ -38,7 +38,7 @@ public class Exercicio_51 {
         for (int i = 0; i < vet1.length; i++) {
             //entrada vetor 1
             System.out.println("===================================================");
-            System.out.println("¨¨PRIMEIRO¨¨VETOR¨¨");
+            System.out.println("¨¨PRIMEIRO¨¨VALOR¨¨");
             System.out.println("INSIRA O PRIMEIRO VALOR NA POSIÇAO" + i);
             System.out.println("===================================================");
             vet1[i] = entrada.nextDouble();
@@ -46,7 +46,7 @@ public class Exercicio_51 {
 
             //entrada vetor 2          
             System.out.println("===================================================");
-            System.out.println("¨¨SEGUNDOO¨¨VETOR¨¨");
+            System.out.println("¨¨SEGUNDOO¨¨VALOR¨¨");
             System.out.println("INSIRA O SEGUNDO VALOR NA POSIÇAO" + i);
             System.out.println("===================================================");
             vet2[i] = entrada.nextDouble();

@@ -28,11 +28,11 @@ public class Exercicio_44 {
         //posiçao y
         int posicao_y;
         //inicializanod variaveis
-        vetor_int = new int[11];
+        vetor_int = new int[10];
         x = y = posicao_x = posicao_y = 0;
 
         //entrada de dados 
-        for (int i = 0; i < 11; i++) { 
+        for (int i = 0; i < 10; i++) { 
             //for de posiçao
             //mostrando a posiçao do elemento
             System.out.println();
@@ -57,12 +57,13 @@ public class Exercicio_44 {
                 }
             }
         }//saida de resultados
-        System.out.println();
+        System.out.println();//quanto a linha for muito grnade dar um [enter]
         System.out.printf("O menor elemento do vetor é %d,"
                 + "\n e sua posição dentro do vetor é:"
                 + " V[%d]\n Já o maior elemento é %d,\n"
                 + " e está na posição V[%d]\n"
                 + "",x , y , posicao_x , posicao_y);
+        System.out.println();
     }
 
 }
