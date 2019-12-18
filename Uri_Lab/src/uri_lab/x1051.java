@@ -19,16 +19,32 @@ import java.util.Scanner;
 public class x1051 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner (System.in);
-        float salario ;
-        salario = entrada.nextFloat();
-        if (salario <= 2000.00) {
-            System.out.println("Isento\n");
-        }else if (salario <= 3000.00){
-            System.out.printf("R$ %.2f\n",(salario - 2000.00) * 0.08);
-        }else if (salario <= 4500.00){
-            System.out.printf("R$ %.2f\n",1000.00 * 0.08 + (salario - 3000.00) * 0.18);
+        //variaveis
+        double salario , aliqueta1 , aliqueta2 ,aliqueta3 , imposto , diferença;
+        //iniciando variavel
+        aliqueta1 = 0.08;
+        aliqueta2 = 0.18;
+        aliqueta3 = 0.28;
+        imposto = 0;
+        //entrada de dados
+        salario = entrada.nextDouble();
+        if (salario <= 2000) {
+            imposto = 0 ;
+        }else if (salario > 2000 && salario <= 3000){
+            diferença = (salario - 2000);
+            imposto = diferença * aliqueta1;       
+        }else if (salario > 3000 && salario <= 4500){
+            imposto = 1000 * aliqueta1;
+            diferença = (salario - 3000);
+            imposto = imposto + (diferença * aliqueta2);
         }else{
-            System.out.printf("R$ %.2f\n",1000.00 * 0.08 + 1500.00 * 0.18 + (salario - 4500.00) * 0.28);
+            imposto = (1000 * aliqueta1) + (1500 * aliqueta2);
+            diferença = salario - 4500;
+            imposto = imposto + (diferença * aliqueta3);
+        }if (imposto <= 0 ) {
+            System.out.printf("Isento\n",imposto);
+        }else{
+            System.out.printf("R$ %.2f\n",imposto);
         }
     }
 }

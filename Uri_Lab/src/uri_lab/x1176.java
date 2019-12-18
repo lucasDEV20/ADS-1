@@ -28,30 +28,27 @@ import java.util.Scanner;
 public class x1176 {
 
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        int num, teste, i = 0;
-        int fibonacci[] = new int[61];
+        Scanner scan = new Scanner(System.in);
+        int T, N;
+        long a, b, c;
+        a = 0;
+        b = 1;
+        c = 0;
+        long fib[] = new long[61];
+        for (int i = 0; i < fib.length; i++) {
+            fib[i] = c;
+            a = b;
+            b = c;
+            c = a + b;
 
-        fibonacci[0] = 0;
-        fibonacci[1] = 1;
-        teste = entrada.nextInt();
-        for (int j = 0; j < teste; j++) {
-            num = entrada.nextInt();
-            for (i = 2; i < 61; i++) {
-                fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-                if (num == 0) {
-                    System.out.print("Fibonacci(" + 0 + ") = " + 0 + "\n");
-                    break;
-                } else if (num == 1) {
-                    System.out.print("Fibonacci(" + 1 + ") = " + 1 + "\n");
-                    break;
-                }
-                if (i == num) {
-                    System.out.print("Fibonacci(" + i + ") = " + fibonacci[i] + "\n");
-                }
+        }
+        T = scan.nextInt();
 
-            }
+        for (int i = 0; i < T; i++) {
+            N = scan.nextInt();
+            System.out.println("Fib(" + N + ") = " + fib[N]);
         }
 
     }
+
 }

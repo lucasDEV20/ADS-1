@@ -24,7 +24,7 @@ public class x1078 {
         int num;
         num = entrada.nextInt();
         for (int i = 1; i <= 10; i = i + 1) {
-            System.out.println(i + " X " + num + " = " + (num * i));
+            System.out.println(i + " x " + num + " = " + (num * i));
 
         }
     }
